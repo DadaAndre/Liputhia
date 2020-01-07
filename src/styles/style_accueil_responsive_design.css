@@ -1,0 +1,193 @@
+/*--------------------------------------------------------------------------------------------------------*/
+                          /*             FONTS               */
+/*--------------------------------------------------------------------------------------------------------*/
+@font-face{
+    font-family: Augusta; /*demander a la prof*/
+    src:url("../font/augusta/Augusta.ttf");
+}
+@font-face {
+    font-family: primaire;
+    src:url("../font/kg_primary_italics/KGPrimaryItalics.ttf");
+}
+@font-face {
+    font-family: AugustaShadow;
+    src:url("../font/augusta/Augusta-Shadow.ttf");
+}
+@font-face {
+    font-family: chop;
+    src:url("../font/chopin_script/ChopinScript.otf");
+}
+/*--------------------------------------------------------------------------------------------------------*/
+                          /*             PAGE D'ACCUEIL               */
+/*--------------------------------------------------------------------------------------------------------*/
+body{
+  margin: 1%;
+  background-color:#21252b;
+  color: white;
+  font-size: 1.25em;
+  font-family: primaire, serif;
+  /* fond de la page (background) */
+  background-image: url("../images/background.png");
+  background-color: blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  /* Fin background */
+}
+
+/*------------------------------La barre de menu------------------------------*/
+.menu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.menu .categorie {
+	display: inline-block;
+  box-shadow: black 0px 5px 10px;
+}
+.menu .categorie ul {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.menu ul{
+  padding:0;
+  margin: 0;
+  margin-bottom: 1%;
+}
+li{
+  padding: 0;
+  margin: 0;
+}
+.menu .categorie:hover ul {
+	display: block;
+}
+.menu h3, .menu a {
+	display: block;
+	margin: 0;
+	padding: .3em 0.5em;
+  text-shadow: 2px 2px 2px black;
+  /*début dégradé menu*/
+  background-color: #181c24;
+  background: linear-gradient(#282F3B,#181c24);
+  /*fin dégradé menu*/
+	text-decoration: none;
+	box-sizing: border-box;
+	width: 31vw;
+}
+.menu h3, .menu a, table a{
+  color: white;
+}
+.menu .categorie:hover h3{
+
+	color: white;
+}
+.menu a:hover {
+	color: white;
+  /*début dégradé menu au hover*/
+	background-color: #63506e;
+  background: linear-gradient(#78647A,#63506e);
+  /*fin dégradé menu au hover*/
+}
+/*------------------------------Liputhia (accueil)------------------------------*/
+
+/*Config "bienvenue à Liputhia"*/
+figure h1{
+  display: inline-block;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: chop, serif;
+  color: black;
+  font-size: 8vw;
+  position: absolute;
+  top:35%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.40) ;
+  box-shadow: black 0px 0px 15px;
+  text-shadow: 2px 2px 2px white;
+}
+
+/*paramètres du texte en dessous de l'image liputhia */
+.cadre_accueil figcaption{
+  background-color: rgba(40,44,52,0.90);
+  font-size: 2vw;
+  position: absolute;
+  top:70%;
+  left: 0%;
+  text-align: center;
+  margin:5%;
+  padding: 1%;
+  border: double black 10px;
+  border-radius: 10px;
+  box-shadow: black 0px 5px 20px;
+}
+
+/*Config image Liputhia*/
+.cadre_accueil{
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0%;
+}
+.cadre_accueil img{
+  width: 100%;
+}
+/*------------------------------bas de page toute les pages------------------------------*/
+footer{
+  font-style: italic;
+
+  margin-top: 10px;
+  border-top: 1px dotted rgba(255, 255, 255, 0.5);
+}
+footer p{
+  font-size: 1.25vw;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+                          /*            RESPONSIVE DESIGN              */
+/*--------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 850px){
+  figure h1{
+    display: block;
+    position: relative;
+  }
+  .menu a {
+    width: 95vw;
+  }
+}
+@media (max-width: 600px) {
+  .cadre_accueil figcaption{
+    font-size: 20px;
+    margin-top: 1%;
+    position: relative;
+  }
+  table td{
+    font-size: 2vw;
+  }
+}
+@media(max-width: 1200px){
+  .grid{
+    display: block;
+    }
+    #retour{
+      display: block;
+    }
+    .navigation{
+      position: relative;
+      margin: 5px 15px 5px 15px;
+    }
+    .navigation li{
+      display: inline;
+      padding: 0;
+      margin: 0;
+    }
+  }
